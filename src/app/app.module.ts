@@ -10,7 +10,6 @@ import { FooterComponent } from './plantillas/footer/footer.component';
 import { FootballTableComponent } from './plantillas/football-table/football-table.component';
 import { GroupTableComponent } from './plantillas/group-table/group-table.component';
 import { PlayerFormComponent } from './plantillas/player-form/player-form.component';
-import { SesionComponent } from './vistas/sesion/sesion.component';
 import { RegisterComponent } from './plantillas/register/register.component';
 import { LoginComponent } from "./plantillas/login/login.component";
 
@@ -24,9 +23,8 @@ import { LoginComponent } from "./plantillas/login/login.component";
     FootballTableComponent,
     GroupTableComponent,
     PlayerFormComponent,
-    SesionComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
