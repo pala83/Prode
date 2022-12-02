@@ -9,13 +9,16 @@ import { FootballDataService } from 'src/app/services/football-data.service';
 })
 export class FootballTableComponent implements OnInit {
 
-    partido: FootballData[] = [];
+    footballData: FootballData | null = null;
 
     constructor(private footballDataService: FootballDataService) { }
 
     ngOnInit(): void {
         this.footballDataService.getAll()
-            .subscribe((user) => console.log(user));
+            .subscribe((footballData: FootballData)=>{
+                this.footballData = footballData;
+                console.log(this.footballData);
+        });
     }
 
 }

@@ -1,1 +1,26 @@
-<p>football-table works!</p>
+<table class="table table-striped">
+    <caption>
+        <ul class="list-group">
+        </ul>
+    </caption>
+    <thead class="table-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let match of footballData?.matches">
+        <td>{{match.LocalDate}}</td>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+    </tbody>
+  </table>
+
+<div>
+    {{footballData?.matches}}
+</div>

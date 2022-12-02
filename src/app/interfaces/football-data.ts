@@ -1,3 +1,5 @@
 export interface FootballData{
-    algo: string
+    from: string;
+    to: string;
+    matches: Array<any>;
 }
