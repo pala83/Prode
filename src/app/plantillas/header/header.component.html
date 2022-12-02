@@ -18,10 +18,14 @@
                     <a class="nav-link" [routerLink]="['/groups']">Grupo</a>
                 </li>
             </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="btn btn-primary mx-3" href="#"><i class="bi bi-person-circle"></i> Sign Up</a></li>
-                <li><a class="btn btn-success mx-3" href="#"><i class="bi bi-box-arrow-in-right"></i> Login</a></li>
+            <ul *ngIf="logueado; else noLogueado" class="nav navbar-nav navbar-right">
+                <li><a class="btn btn-warning mx-3 disabled"><i class="bi bi-person-circle"></i> {{logueado}}</a></li>
+                <li><a class="btn btn-outline-danger mx-3" (click)="cerrarSesion()"><i class="bi bi-box-arrow-left"></i> Cerrar sesion</a></li>
             </ul>
+            <ng-template #noLogueado>
+                <li><a class="btn btn-outline-primary mx-3" [routerLink]="['/sesion']"><i class="bi bi-person-circle"></i> Registrate</a></li>
+                <li><a class="btn btn-outline-success mx-3" [routerLink]="['/sesion']"><i class="bi bi-box-arrow-in-right"></i> Inicia sesion</a></li>
+            </ng-template>
         </div>
     </div>
 </nav>

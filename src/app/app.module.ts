@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,6 +12,7 @@ import { GroupTableComponent } from './plantillas/group-table/group-table.compon
 import { PlayerFormComponent } from './plantillas/player-form/player-form.component';
 import { SesionComponent } from './vistas/sesion/sesion.component';
 import { RegisterComponent } from './plantillas/register/register.component';
+import { LoginComponent } from "./plantillas/login/login.component";
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { RegisterComponent } from './plantillas/register/register.component';
     GroupTableComponent,
     PlayerFormComponent,
     SesionComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
