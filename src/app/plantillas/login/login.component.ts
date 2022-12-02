@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
             this.router.navigate(["/home"]);
             setTimeout(()=>{
                 location.reload();
-            }, 1000)
+            }, 1000);
         }
         else
             this.error = true;
